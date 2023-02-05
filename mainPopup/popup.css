@@ -1,0 +1,80 @@
+body {
+	background-color: #404040;
+	color: #ffffff;
+	border: 1px solid;
+	border-color: #1ecf30;
+	padding: 0px 0px;
+	margin: 0px 0px;
+}
+
+.popup-div {
+	padding: 5px;
+}
+
+#addButton {
+	background-image: url("/images/add-button-24.png");
+	background-repeat: no-repeat;
+	width: 24px;
+	height: 24px;
+	background-color: transparent;
+	border: none;
+	padding: 0px 0px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 0px 0px;
+	cursor: pointer;
+	vertical-align: top;
+}
+
+#addButton:hover {
+	background-image: url("/images/add-button-24-hover.png");
+	background-repeat: no-repeat;
+	width: 24px;
+	height: 24px;
+	background-color: transparent;
+	border: none;
+	padding: 0px 0px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 0px 0px;
+	cursor: pointer;
+	vertical-align: top;
+}
+
+#deleteButton {
+	background-image: url("/images/remove-button-24.png");
+	background-repeat: no-repeat;
+	width: 24px;
+	height: 24px;
+	background-color: transparent;
+	border: none;
+	padding: 0px 0px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 0px 0px;
+	cursor: pointer;
+	vertical-align: top;
+}
+
+#deleteButton:hover {
+	background-image: url("/images/remove-button-24-hover.png");
+	background-repeat: no-repeat;
+	width: 24px;
+	height: 24px;
+	background-color: transparent;
+	border: none;
+	padding: 0px 0px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 0px 0px;
+	cursor: pointer;
+	vertical-align: top;
+}

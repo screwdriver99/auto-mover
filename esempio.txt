@@ -1,0 +1,248 @@
+[
+    {
+        "id": "account3",
+        "name": "l.battini@celinsrl.com",
+        "type": "imap",
+        "folders": [
+            {
+                "accountId": "account3",
+                "name": "Posta in arrivo",
+                "path": "/INBOX",
+                "type": "inbox",
+                "subFolders": []
+            },
+            {
+                "accountId": "account3",
+                "name": "Bozze",
+                "path": "/Drafts",
+                "type": "drafts",
+                "subFolders": []
+            },
+            {
+                "accountId": "account3",
+                "name": "Posta inviata",
+                "path": "/Sent",
+                "type": "sent",
+                "subFolders": []
+            },
+            {
+                "accountId": "account3",
+                "name": "Archivi",
+                "path": "/Archives",
+                "type": "archives",
+                "subFolders": []
+            },
+            {
+                "accountId": "account3",
+                "name": "Cestino",
+                "path": "/Trash",
+                "type": "trash",
+                "subFolders": [
+                    {
+                        "accountId": "account3",
+                        "name": "gg",
+                        "path": "/Trash/gg",
+                        "subFolders": []
+                    }
+                ]
+            }
+        ],
+        "identities": [
+            {
+                "accountId": "account3",
+                "id": "id2",
+                "label": "",
+                "name": "Lorenzo Battini",
+                "email": "l.battini@celinsrl.com",
+                "replyTo": "",
+                "organization": "",
+                "composeHtml": true,
+                "signature": "",
+                "signatureIsPlainText": false
+            }
+        ]
+    },
+    {
+        "id": "account4",
+        "name": "celinsrl@celinsrl.com",
+        "type": "imap",
+        "folders": [
+            {
+                "accountId": "account4",
+                "name": "Posta in arrivo",
+                "path": "/INBOX",
+                "type": "inbox",
+                "subFolders": [
+                    {
+                        "accountId": "account4",
+                        "name": "Posta inviata",
+                        "path": "/INBOX/Sent",
+                        "type": "sent",
+                        "subFolders": []
+                    }
+                ]
+            }
+        ],
+        "identities": [
+            {
+                "accountId": "account4",
+                "id": "id1",
+                "label": "",
+                "name": "CELINSRL",
+                "email": "celinsrl@celinsrl.com",
+                "replyTo": "",
+                "organization": "",
+                "composeHtml": true,
+                "signature": "",
+                "signatureIsPlainText": true
+            }
+        ]
+    },
+    {
+        "id": "account2",
+        "name": "Cartelle locali",
+        "type": "none",
+        "folders": [
+            {
+                "accountId": "account2",
+                "name": "Cestino",
+                "path": "/Trash",
+                "type": "trash",
+                "subFolders": []
+            },
+            {
+                "accountId": "account2",
+                "name": "Posta in uscita",
+                "path": "/Unsent Messages",
+                "type": "outbox",
+                "subFolders": []
+            }
+        ],
+        "identities": []
+    }
+]
+
+
+{
+    "id": null,
+    "messages": [
+        {
+            "id": 2,
+            "date": "2023-02-01T14:58:04.000Z",
+            "author": "Lorenzo Battini <lorenzobattini18@gmail.com>",
+            "recipients": [
+                "l.battini@celinsrl.com"
+            ],
+            "ccList": [],
+            "bccList": [],
+            "subject": "Test",
+            "read": false,
+            "new": true,
+            "headersOnly": false,
+            "flagged": false,
+            "junk": false,
+            "junkScore": 0,
+            "headerMessageId": "CAJ1_fQeQUmA7qdBs0S6H351r=GXtBCUm9o4sgUH9900cy4otWw@mail.gmail.com",
+            "size": 3595,
+            "tags": [],
+            "external": false,
+            "folder": {
+                "accountId": "account3",
+                "name": "Posta in arrivo",
+                "path": "/INBOX",
+                "type": "inbox"
+            }
+        }
+    ]
+}
+
+print: {
+    "contentType": "message/rfc822",
+    "partName": "",
+    "size": 8,
+    "headers": {
+        "delivered-to": [
+            "plasticbomb99@gmail.com"
+        ],
+        "received": [
+            "by 2002:a05:6871:79d:b0:160:645a:571f with SMTP id o29csp2271923oap;        Sun, 5 Feb 2023 01:30:04 -0800 (PST)",
+            "from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])        by mx.google.com with SMTPS id s30-20020a508d1e000000b0046957dfa2cdsor138744eds.20.2023.02.05.01.30.04        for <plasticbomb99@gmail.com>        (Google Transport Security);        Sun, 05 Feb 2023 01:30:04 -0800 (PST)",
+            "from [192.168.1.214] ([151.16.206.86])        by smtp.gmail.com with ESMTPSA id q26-20020a170906a09a00b007aece68483csm3898045ejy.193.2023.02.05.01.30.03        for <plasticbomb99@gmail.com>        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);        Sun, 05 Feb 2023 01:30:03 -0800 (PST)"
+        ],
+        "x-received": [
+            "by 2002:a05:6402:4315:b0:4aa:b0e9:84dd with SMTP id m21-20020a056402431500b004aab0e984ddmr866242edc.3.1675589404598;        Sun, 05 Feb 2023 01:30:04 -0800 (PST)",
+            "by 2002:a05:6402:911:b0:499:bf28:d9c6 with SMTP id g17-20020a056402091100b00499bf28d9c6mr15835789edz.5.1675589404207;        Sun, 05 Feb 2023 01:30:04 -0800 (PST)"
+        ],
+        "arc-seal": [
+            "i=1; a=rsa-sha256; t=1675589404; cv=none;        d=google.com; s=arc-20160816;        b=cPitgOoWOvhSYaCN/aTmEbFs6/ZW8xkmDNGDenepaAQ138gOQdFC3SrHA3XLV09J6F         k4fsolE+gm+nPIMk1Rr2K4nMMhKpqlANJM7RTcNKsc5pt2OCtZXQCZQa6cCY25757Rm6         Cvj+ZPZ+WzTbFz+AiYX1q9szoWm7R55K3b3RY+wCD97DwmVIx2S6UvO0zZjKo/IMOs3V         nd5DRdjaNzzxYRHLVEgJhaAyrdOU/fQof7twHYgaYoAfsfPqdZtCRNScwJ9pGYE36njF         dR8uJmnoiHfPqGrq7344D0umcwMU+tyrehO7lb04UW3+6iw5hvLEF/SbtcdYAvI41Ges         6s/g=="
+        ],
+        "arc-message-signature": [
+            "i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;        h=content-transfer-encoding:subject:from:to:user-agent:mime-version         :date:message-id:dkim-signature;        bh=Touenr7dUe0Mxv9r3OfnQ+GHpFRIdDa3Wa3TWnDOQKs=;        b=uWeBSahAy0isqpTxRXc8r9D5wToL1bIahEmF6K9KTgIOklMyeGgbhUoqHC2LdhP/KJ         fOlKKW73TfeP/GAinTSbc17Uo7zFX07yId84h1NqgU0G1YsJ0ltIwG7sWaVfG5BqHUJk         DL7x8O8lb6u74smfAlbn2gLMieDvOgc+o4UcgtGa4LZtnnHT7TXURLPofYaxZGv6vLGD         YFWk3KOfm5YBbieK/4HdBN8F3HYsfwFmalS1VInEnPrTwoDZ5CJivSIS0uAIYtf4w4Gt         zsP1wQ7vDZ+6w3VHSZIKYeBQk9sliUO2Hbl+/U33VdaRGd2BJQwPFZTawd/aZHgEuPyz         +qCg=="
+        ],
+        "arc-authentication-results": [
+            "i=1; mx.google.com;       dkim=pass header.i=@gmail.com header.s=20210112 header.b=kPVxmcPV;       spf=pass (google.com: domain of lorenzobattini18@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=lorenzobattini18@gmail.com;       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com"
+        ],
+        "return-path": [
+            "<lorenzobattini18@gmail.com>",
+            "<lorenzobattini18@gmail.com>"
+        ],
+        "received-spf": [
+            "pass (google.com: domain of lorenzobattini18@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;"
+        ],
+        "authentication-results": [
+            "mx.google.com;       dkim=pass header.i=@gmail.com header.s=20210112 header.b=kPVxmcPV;       spf=pass (google.com: domain of lorenzobattini18@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=lorenzobattini18@gmail.com;       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com"
+        ],
+        "dkim-signature": [
+            "v=1; a=rsa-sha256; c=relaxed/relaxed;        d=gmail.com; s=20210112;        h=content-transfer-encoding:subject:from:to:user-agent:mime-version         :date:message-id:from:to:cc:subject:date:message-id:reply-to;        bh=Touenr7dUe0Mxv9r3OfnQ+GHpFRIdDa3Wa3TWnDOQKs=;        b=kPVxmcPVwx7b9+MMc9FUnYczYI2g9q8Ct5W3dV7hDGaMxmP9QlghmcTYRvGituPM6n         c+0L/mo+9OKT+8oWgN+brBpXOgBZWuUpI/KBzWa/s4h1tU0I/JbVqv1G7HLphh5AN+RC         7Rxy1Zd4te7/Rn6U90uooFL347xoFRcESTWI4zXwEE+8/soafeF8RwPilYBv5HchS4f4         mPgXBcAPhfeMZwUVTtg90J3SPki/QT5dtm8ZSiG1qUBRWMLNoqHbkXzvCLnOspLY5Kb5         J1cJ3A5hUZb8WveXtcY6haP/KF+Xctzcq1u/f8VU/w/kFkB+2qCQYZalhfeMvgxMuf46         632w=="
+        ],
+        "x-google-dkim-signature": [
+            "v=1; a=rsa-sha256; c=relaxed/relaxed;        d=1e100.net; s=20210112;        h=content-transfer-encoding:subject:from:to:user-agent:mime-version         :date:message-id:x-gm-message-state:from:to:cc:subject:date         :message-id:reply-to;        bh=Touenr7dUe0Mxv9r3OfnQ+GHpFRIdDa3Wa3TWnDOQKs=;        b=3NeS2+RgZtqCjzxUGjFt9mpLgzhrTBd5aFa8eOgkfbKONd8Hc88AgUac9DGr8zqUH5         Ziulh9sklniUwjWnes8TEEIz8RSsX4Mj7U4ORgXgtiIHSKcRGi7NKU2+DlQs37yD+ER+         /sBcI+R0uHNQpfvOwuQYFyDtKF4+Iw7YojV4pz7GvPglLqw2NUMx6RoE87EDcLS1XKoM         7IDYVmd1KCcQAWES166Iq3ujZsiLD387fyEE5+ci/bemO6GcNxF+2P8mGC9ZGvQTvyRm         tylg5eVVvDyQLHloFrgPcdV1AYVn46TQt64HH9exPpmrqxXoL5+dDuN+1XfHL0z/3kUj         zx8Q=="
+        ],
+        "x-gm-message-state": [
+            "AO0yUKXpGv1NwzI9S8XbAEyzSJt6e1fxlpH4+vd6RpsgBM5nwEceCJDt iAwR+gnBysOe+vgSu5r3QxGN1XYcDMk="
+        ],
+        "x-google-smtp-source": [
+            "AK7set8SwmYB/oIdGS+1UWydLqHYH63tIXsgBtDcQVqFKEUikVUnGQFo16wlEbBxyELxYN/dvic8pg=="
+        ],
+        "message-id": [
+            "<7ff7ab0e-36c6-80b3-bd34-a4394c9d2023@gmail.com>"
+        ],
+        "date": [
+            "Sun, 5 Feb 2023 10:30:03 +0100"
+        ],
+        "mime-version": [
+            "1.0"
+        ],
+        "user-agent": [
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Thunderbird/102.6.1"
+        ],
+        "to": [
+            "plasticbomb99@gmail.com"
+        ],
+        "from": [
+            "Lorenzo Battini <lorenzobattini18@gmail.com>"
+        ],
+        "subject": [
+            "jhjhj"
+        ],
+        "content-type": [
+            "text/plain; charset=UTF-8; format=flowed"
+        ],
+        "content-transfer-encoding": [
+            "7bit"
+        ]
+    },
+    "parts": [
+        {
+            "body": "okok\r\n\r\n",
+            "contentType": "text/plain",
+            "partName": "1",
+            "size": 8,
+            "headers": {
+                "content-type": [
+                    "text/plain; charset=UTF-8; format=flowed"
+                ]
+            }
+        }
+    ]
+}

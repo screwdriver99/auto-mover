@@ -1,0 +1,35 @@
+{
+	"manifest_version": 2,
+	"name": "AutoMover",
+	"description": "An extension that auto-moves new emails in folders",
+	"version": "1.0",
+	"author": "Screwdriver99",
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "{9584f686-8c77-460f-a3fd-1f6c7ed038fe}",
+			"strict_min_version": "78.0"
+		}
+	},
+	"browser_action": {
+		"default_popup": "mainPopup/popup.html",
+		"default_title": "Settings",
+		"default_icon": "images/waste-32px.png"
+	},
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"icons": {
+		"64": "images/waste.png",
+		"32": "images/waste-32px.png",
+		"16": "images/waste-16px.png"
+	},
+	"permissions": [
+		"accountsRead",
+		"messagesRead",
+		"messagesMove",
+		"menus",
+		"activeTab",
+		"menus.overrideContext",
+		"storage"
+	]
+}
