@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": "AutoMover",
 	"description": "An extension that auto-moves new emails in folders",
-	"version": "1.0",
+	"version": "1.5",
 	"author": "Screwdriver99",
 	"browser_specific_settings": {
 		"gecko": {
