@@ -1,6 +1,6 @@
-// messenger.storage.local.get().then(function (data) {
-// 	console.log("storage: " + JSON.stringify(data, null, 4));
-// });
+messenger.storage.local.get().then(function (data) {
+	console.log("storage: " + JSON.stringify(data, null, 4));
+});
 
 const addButton = document.getElementById("addButton");
 const deleteButton = document.getElementById("deleteButton");
@@ -8,6 +8,17 @@ const filterList = document.getElementById("filterList");
 const folderName = document.getElementById("folderName");
 const mailInput = document.getElementById("mail");
 const filterText = document.getElementById("filter");
+const directionSelect = document.getElementById("direction");
+let option = document.createElement("option");
+option.text = "incoming";
+directionSelect.add(option);
+option = document.createElement("option");
+option.text = "outgoing";
+directionSelect.add(option);
+option = document.createElement("option");
+option.text = "both";
+directionSelect.add(option);
+
 var accounts;
 
 messenger.accounts.list(true).then(function (emails) {
@@ -19,7 +30,6 @@ function updateAccounts() {
 	for (const element of accounts) {
 		if (element.identities[0] != undefined) {
 			let option = document.createElement("option");
-			//console.log(element.identities[0].email);
 			option.text = element.identities[0].email;
 			mailInput.add(option);
 		}
@@ -28,16 +38,24 @@ function updateAccounts() {
 	updateFolders(mailInput.value);
 }
 
+function addSubfolders(folder) {
+	let option = document.createElement("option");
+	option.text = folder.name;
+	option.value = folder.path;
+	folderName.add(option);
+
+	for (const subfolder of folder.subFolders) {
+		addSubfolders(subfolder);
+	}
+}
+
 function updateFolders(email) {
+	clearFolders();
 	for (const element of accounts) {
 		if (element.identities[0] != undefined) {
 			if (element.identities[0].email == email) {
-				clearFolders();
-
 				for (const folder of element.folders) {
-					let option = document.createElement("option");
-					option.text = folder.name;
-					folderName.add(option);
+					addSubfolders(folder);
 				}
 				break;
 			}
@@ -47,13 +65,13 @@ function updateFolders(email) {
 	//update filter list
 
 	messenger.storage.local.get("accounts").then(function (data) {
+		clearFilters();
 		let str = "";
 		if (data != undefined) {
 			if (Object.keys(data).length != 0) {
 				if (data.accounts.length != 0) {
 					for (let account of data.accounts) {
 						if (account.mail == email) {
-							clearFilters();
 							for (let filter of account.filters) {
 								let option = document.createElement("option");
 								option.text =
@@ -86,19 +104,27 @@ addButton.onclick = function () {
 	let mail = mailInput.value;
 	let folder = folderName.value;
 	let filter = filterText.value;
+	let direction = directionSelect.value;
 
-	if (!mail || !folder || !filter) {
+	if (!mail || !folder || !filter || !direction) {
 		return;
 	}
 
 	console.log(
-		'New filter "' + filter + '" -> ' + folder + " set for " + mail
+		'New filter "' +
+			filter +
+			'" -> ' +
+			folder +
+			" set for " +
+			mail +
+			", direction: " +
+			direction
 	);
 
 	let obj = new Object();
 	obj.mail = mail;
 	obj.filters = new Array();
-	obj.filters.push({ filter, folder });
+	obj.filters.push({ filter, folder, direction });
 	let accounts = new Array();
 	accounts.push(obj);
 
@@ -118,11 +144,16 @@ addButton.onclick = function () {
 								if (f.filter == filter) {
 									filterFound = true;
 									f.folder = folder;
+									f.direction = direction;
 									break;
 								}
 							}
 							if (!filterFound) {
-								account.filters.push({ filter, folder });
+								account.filters.push({
+									filter,
+									folder,
+									direction,
+								});
 							}
 							break;
 						}
